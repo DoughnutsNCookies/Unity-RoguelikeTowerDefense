@@ -10,7 +10,8 @@ public class EnemyMovement : MonoBehaviour
 
     void Start()
 	{
-        waypointsCopy = Waypoints.waypoints;
+        Debug.Log("Spawn");
+        waypointsCopy = new List<Transform>(Waypoints.waypoints);
         enemy = GetComponent<Enemy>();
         GetNextNearestWaypoint();
 	}
